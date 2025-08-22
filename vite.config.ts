@@ -4,10 +4,12 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
+// ...existing code...
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    allowedHosts: ["open-it.onrender.com"], // <-- Add this line
   },
   plugins: [
     react(),
@@ -20,3 +22,4 @@ export default defineConfig(({ mode }) => ({
     },
   },
 }));
+// ...existing code...
